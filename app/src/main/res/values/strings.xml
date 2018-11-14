@@ -5,4 +5,8 @@
     <string name="avengersCreators">Stan Lee; Jack Kirby</string>
     <string name="XMenName">X-Men</string>
     <string name="XMenCreators">Stan Lee; Jack Kirby</string>
+    <string name="FantasticFourName">Fantastic Four</string>
+    <string name="FantasticFourCreators">Stan Lee; Jack Kirby</string>
+    <string name="GuardiansGalaxyName">The Guardians Of The Galaxy</string>
+    <string name="GuardiansGalaxyCreators">Dan Abnett; Andy Lanning</string>
 </resources>

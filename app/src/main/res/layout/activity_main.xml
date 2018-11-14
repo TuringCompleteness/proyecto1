@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".MainActivity"
     android:id="@+id/relativelayout"
     android:layout_width="fill_parent"
     android:layout_height="fill_parent">
@@ -13,109 +14,197 @@
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"/>
 
-    <TextView
-        android:id="@+id/teamsTV"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/marvelWallpaper"
-        android:layout_margin="1dp"
-        android:gravity="center"
-        android:text="@string/heroesList"
-        android:textColor="#9aa7bc"
-        android:textSize="40sp" />
-
-    <LinearLayout
+    <ScrollView
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical"
-        android:layout_below="@id/teamsTV">
-
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/avengersCV"
-            android:layout_gravity="center"
+        android:layout_below="@id/marvelWallpaper">
+        <LinearLayout
             android:layout_width="match_parent"
-            android:layout_margin="10dp"
-            android:layout_height="100dp"
-            android:background="@color/colorPrimary"
-            card_view:cardCornerRadius="4dp">
+            android:layout_height="match_parent"
+            android:orientation="vertical">
 
-            <RelativeLayout
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/avengersCV"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_margin="10dp"
+                android:layout_height="100dp"
+                card_view:cardCornerRadius="4dp">
 
-                <ImageView
-                    android:id="@+id/teamAvengersIV"
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/teamAvengersTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/teamAvengersIV"
-                    android:text="@string/avengersName"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="italic"
-                    android:fontFamily="sans-serif"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorAccent"/>
+                    <ImageView
+                        android:id="@+id/teamAvengersIV"
+                        android:layout_width="125dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/avengers"
+                        android:scaleType="centerCrop"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/teamAvengersIV"
-                    android:layout_below="@id/teamAvengersTV"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="@string/avengersCreators"
-                    android:textColor="@color/colorAccent"/>
+                    <TextView
+                        android:id="@+id/teamAvengersTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/teamAvengersIV"
+                        android:text="@string/avengersName"
+                        android:layout_margin="10dp"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif"
+                        android:textSize="20sp"
+                        />
 
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/teamAvengersIV"
+                        android:layout_below="@id/teamAvengersTV"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/avengersCreators"
+                        android:layout_margin="10dp"
+                        />
 
-        <android.support.v7.widget.CardView
-            xmlns:card_view="http://schemas.android.com/apk/res-auto"
-            android:id="@+id/XMenCV"
-            android:layout_gravity="center"
-            android:layout_width="match_parent"
-            android:layout_height="100dp"
-            android:layout_margin="10dp"
-            android:background="@color/colorPrimary"
-            card_view:cardCornerRadius="4dp">
+                </RelativeLayout>
 
-            <RelativeLayout
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/XMenCV"
+                android:layout_gravity="center"
                 android:layout_width="match_parent"
-                android:layout_height="match_parent">
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                card_view:cardCornerRadius="4dp">
 
-                <ImageView
-                    android:id="@+id/XMenIV"
-                    android:layout_width="150dp"
-                    android:layout_height="match_parent" />
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
 
-                <TextView
-                    android:id="@+id/XMenTV"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/XMenIV"
-                    android:text="@string/XMenName"
-                    android:layout_marginTop="10dp"
-                    android:textStyle="italic"
-                    android:fontFamily="sans-serif"
-                    android:textSize="20sp"
-                    android:textColor="@color/colorAccent"/>
+                    <ImageView
+                        android:id="@+id/XMenIV"
+                        android:layout_width="125dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/xmen"
+                        android:scaleType="centerCrop"/>
 
-                <TextView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_toRightOf="@id/XMenIV"
-                    android:layout_below="@id/XMenTV"
-                    android:fontFamily="sans-serif-condensed"
-                    android:text="@string/XMenCreators"
-                    android:textColor="@color/colorAccent"/>
+                    <TextView
+                        android:id="@+id/XMenTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/XMenIV"
+                        android:text="@string/XMenName"
+                        android:layout_margin="10dp"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif"
+                        android:textSize="20sp"
+                        />
 
-            </RelativeLayout>
-        </android.support.v7.widget.CardView>
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/XMenIV"
+                        android:layout_below="@id/XMenTV"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/XMenCreators"
+                        android:layout_margin="10dp"
+                        />
 
-    </LinearLayout>
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/FantasticFourCV"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/FantasticFourIV"
+                        android:layout_width="125dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/fantasticfour"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/FantasticFourTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/FantasticFourIV"
+                        android:text="@string/FantasticFourName"
+                        android:layout_margin="10dp"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif"
+                        android:textSize="20sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/FantasticFourIV"
+                        android:layout_below="@id/FantasticFourTV"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/FantasticFourCreators"
+                        android:layout_margin="10dp"
+                        />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+            <android.support.v7.widget.CardView
+                xmlns:card_view="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/GuardiansGalaxyCV"
+                android:layout_gravity="center"
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:layout_margin="10dp"
+                card_view:cardCornerRadius="4dp">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <ImageView
+                        android:id="@+id/GuardiansGalaxyIV"
+                        android:layout_width="125dp"
+                        android:layout_height="match_parent"
+                        android:src="@drawable/guardiansgalaxy"
+                        android:scaleType="centerCrop"/>
+
+                    <TextView
+                        android:id="@+id/GuardiansGalaxyTV"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/GuardiansGalaxyIV"
+                        android:text="@string/GuardiansGalaxyName"
+                        android:layout_margin="10dp"
+                        android:textStyle="italic"
+                        android:fontFamily="sans-serif"
+                        android:textSize="20sp"
+                        />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/GuardiansGalaxyIV"
+                        android:layout_below="@id/GuardiansGalaxyTV"
+                        android:fontFamily="sans-serif-condensed"
+                        android:text="@string/GuardiansGalaxyCreators"
+                        android:layout_marginLeft="10dp"
+                        />
+
+                </RelativeLayout>
+            </android.support.v7.widget.CardView>
+
+        </LinearLayout>
+    </ScrollView>
 
 </RelativeLayout>
