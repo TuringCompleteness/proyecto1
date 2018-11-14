@@ -1,0 +1,8 @@
+<resources>
+    <string name="app_name">HeroesCatalogue</string>
+    <string name="heroesList">Equipos</string>
+    <string name="avengersName">The Avengers</string>
+    <string name="avengersCreators">Stan Lee; Jack Kirby</string>
+    <string name="XMenName">X-Men</string>
+    <string name="XMenCreators">Stan Lee; Jack Kirby</string>
+</resources>
