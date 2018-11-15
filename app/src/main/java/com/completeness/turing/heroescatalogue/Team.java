@@ -29,27 +29,32 @@ public class Team extends Activity {
                 teamWallpaper.setImageResource(R.drawable.avengers);
                 teamName.setText(R.string.avengersName);
                 teamCreators.setText(R.string.avengersCreators);
+                setHeroes("Avengers");
                 break;
             case R.id.XMenCV:
                 teamWallpaper.setImageResource(R.drawable.xmen);
                 teamName.setText(R.string.XMenName);
                 teamCreators.setText(R.string.XMenCreators);
+                setHeroes("XMen");
                 break;
             case R.id.FantasticFourCV:
                 teamWallpaper.setImageResource(R.drawable.fantasticfour);
                 teamName.setText(R.string.FantasticFourName);
                 teamCreators.setText(R.string.FantasticFourCreators);
+                setHeroes("FantasticFour");
                 break;
             case R.id.GuardiansGalaxyCV:
                 teamWallpaper.setImageResource(R.drawable.guardiansgalaxy);
                 teamName.setText(R.string.GuardiansGalaxyName);
                 teamCreators.setText(R.string.GuardiansGalaxyCreators);
+                setHeroes("GuardiansGalaxy");
                 break;
         }
     }
 
-    private void getInfo(String team) {
-
+    private void setHeroes(String team) {
+        String[] heroes = TeamCharacters.getHeroes(team);
+        System.out.println(heroes);
     }
 
 }
