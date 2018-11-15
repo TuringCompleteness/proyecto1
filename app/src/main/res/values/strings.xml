@@ -9,4 +9,5 @@
     <string name="FantasticFourCreators">Stan Lee; Jack Kirby</string>
     <string name="GuardiansGalaxyName">The Guardians Of The Galaxy</string>
     <string name="GuardiansGalaxyCreators">Dan Abnett; Andy Lanning</string>
+    <string name="title_activity_team">Team</string>
 </resources>
