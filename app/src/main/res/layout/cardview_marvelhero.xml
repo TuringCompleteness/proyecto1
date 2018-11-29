@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/cardViewMarvelHero"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:layout_marginBottom="@dimen/cardview_default_elevation"
+    card_view:cardCornerRadius="15dp"
+    android:layout_gravity="center"
+    android:layout_margin="10dp"
+    card_view:cardBackgroundColor="@color/colorPrimaryDark"
+    android:onClick="cardViewClick"
+    >
+
+    <RelativeLayout
+        android:id="@+id/teamPicture"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ImageView
+            android:id="@+id/heroImageView"
+            android:layout_width="125dp"
+            android:layout_height="match_parent"
+            android:src="@drawable/xmen"
+            android:scaleType="centerCrop"
+            />
+
+        <TextView
+            android:id="@+id/nameTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@id/heroImageView"
+            android:text="@string/teamName"
+            android:layout_margin="10dp"
+            android:textStyle="italic"
+            android:fontFamily="sans-serif"
+            android:textSize="20sp"
+            android:textColor="@color/colorAccent" />
+
+
+    </RelativeLayout>
+</android.support.v7.widget.CardView>

@@ -19,7 +19,7 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".Team"
+            android:name=".TeamActivity"
             android:label="@string/title_activity_team"
             android:parentActivityName=".MainActivity">
             <meta-data

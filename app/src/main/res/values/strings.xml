@@ -10,4 +10,10 @@
     <string name="GuardiansGalaxyName">The Guardians Of The Galaxy</string>
     <string name="GuardiansGalaxyCreators">Dan Abnett; Andy Lanning</string>
     <string name="title_activity_team">Team</string>
+
+
+    <string name="teamName">Team</string>
+    <string name="teamCreators">Creators</string>
+
+    <drawable name="AvengersPicture"> </drawable>
 </resources>

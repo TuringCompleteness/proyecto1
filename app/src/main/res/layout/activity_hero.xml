@@ -34,11 +34,4 @@
         android:textSize="15sp"
         android:layout_marginLeft="15dp"/>
 
-    <android.support.v7.widget.RecyclerView
-        android:id="@+id/superheroesRecyclerView"
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:layout_centerInParent="true"
-        android:layout_below="@id/teamCreators"/>
-
 </RelativeLayout>
