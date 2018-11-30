@@ -107,12 +107,13 @@ public class TeamActivity extends Activity {
         for (int i = 0; i < jsonArray.length(); i++){
             JSONObject hero = jsonArray.getJSONObject(i);
             String description = "";
-            if(hero.isNull("description")){
+            if(hero.isNull("description") || hero.getString("description") == ""){
                 description = "Lo sentimos, este héroe no tiene información, quizá está en un " +
                         "archivo secreto de S.H.I.E.L.D";
             }else{
                 description = hero.getString("description");
             }
+            System.out.println(description);
 
             JSONObject thumbnail = hero.getJSONObject("thumbnail");
             String path = thumbnail.getString("path");
