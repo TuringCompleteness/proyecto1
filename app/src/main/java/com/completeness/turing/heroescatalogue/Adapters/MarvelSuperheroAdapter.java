@@ -11,6 +11,7 @@ import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.bumptech.glide.Glide;
 import com.completeness.turing.heroescatalogue.R;
 import com.completeness.turing.heroescatalogue.GraphicModels.MarvelSuperhero;
 import com.completeness.turing.heroescatalogue.SuperheroActivity;
@@ -38,8 +39,12 @@ public class MarvelSuperheroAdapter extends RecyclerView.Adapter<MarvelSuperhero
     @Override
     public void onBindViewHolder(@NonNull MarvelSuperheroViewHolder marvelHeroViewHolder, int i) {
         final MarvelSuperhero hero = marvelSuperheroes.get(i);
-        marvelHeroViewHolder.heroImageView.setImageResource(hero.getPicture());
-        marvelHeroViewHolder.nameTextView.setText(hero.getDescription());
+        if (!(hero.getMarvelPicture() == "")){
+            Glide.with(activity).load(hero.getMarvelPicture()).into(marvelHeroViewHolder.heroImageView);
+        } else {
+            marvelHeroViewHolder.heroImageView.setImageResource(hero.getPicture());
+        }
+        marvelHeroViewHolder.nameTextView.setText(hero.getName());
 
         marvelHeroViewHolder.heroCard.setOnClickListener(new View.OnClickListener() {
             @Override

@@ -55,17 +55,17 @@ public class MainActivity extends AppCompatActivity {
                                 "Stan Lee", Color.parseColor("#A33127")));
         teams.add(new MarvelTeam(R.drawable.xmen_logo,  "X Men",
                                 "Stan Lee", Color.parseColor("#F00000")));
-        teams.add(new MarvelTeam(R.drawable.avengers, "Fantastic Four",
+        teams.add(new MarvelTeam(R.drawable.fantastic_logo, "Fantastic Four",
                                 "Stan Lee", Color.parseColor("#005393")));
         teams.add(new MarvelTeam(R.drawable.guardians_logo, "Guardians of The Galaxy",
                                 "Stan Lee", Color.parseColor("#5A1B8E")));
-        teams.add(new MarvelTeam(R.drawable.avengers, "The Defenders",
+        teams.add(new MarvelTeam(R.drawable.defenders_logo, "The Defenders",
                                 "Stan Lee", Color.parseColor("#000000")));
         teams.add(new MarvelTeam(R.drawable.inhumans_logo, "Inhumans",
                                 "Stan Lee", Color.parseColor("#00A5BC")));
-        teams.add(new MarvelTeam(R.drawable.avengers, "Runaways",
+        teams.add(new MarvelTeam(R.drawable.runaways_logo, "Runaways",
                                 "Stan Lee", Color.parseColor("#A33127")));
-        teams.add(new MarvelTeam(R.drawable.avengers, "Heroes for Hire",
+        teams.add(new MarvelTeam(R.drawable.hire_logo, "Heroes for Hire",
                                 "Stan Lee", Color.parseColor("#A33127")));
     }
 }

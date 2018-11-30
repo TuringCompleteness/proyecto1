@@ -21,7 +21,7 @@
             android:id="@+id/teamImageView"
             android:layout_width="125dp"
             android:layout_height="match_parent"
-            android:src="@drawable/xmen"
+            android:src="@drawable/profile"
             android:scaleType="centerCrop"
             />
 

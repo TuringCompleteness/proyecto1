@@ -24,10 +24,10 @@ import java.util.ArrayList;
 
 public class TeamActivity extends Activity {
 
-    ArrayList<MarvelSuperhero> marvelSuperheroes;
+    ArrayList<MarvelSuperhero> marvelSuperheroes = new ArrayList<MarvelSuperhero>();
+    MarvelSuperheroAdapter marvelSuperheroAdapter = new MarvelSuperheroAdapter(marvelSuperheroes, this);
     ImageView teamWallpaper;
     TextView teamName, teamCreators;
-    MarvelSuperhero marvelSuperhero;
 
     private RecyclerView recyclerView;
 
@@ -51,7 +51,7 @@ public class TeamActivity extends Activity {
         String teamCreatorsString = bundle.getString("creators");
 
 
-        teamWallpaper.setImageResource(R.drawable.avengers);
+        teamWallpaper.setImageResource(R.drawable.cover);
         teamName.setText(teamNameString);
         teamCreators.setText(teamCreatorsString);
 
@@ -63,21 +63,14 @@ public class TeamActivity extends Activity {
         recyclerView.setLayoutManager(linearLayoutManager);
 
         startView(teamNameString);
-
     }
 
     private void startView(String team) {
-        marvelSuperheroes = new ArrayList<MarvelSuperhero>();
-
         ApiClient client = new ApiClient();
         MarvelAPIService service = client.buildRetrofit();
 
         String[] heroes = TeamCharacters.getHeroes(team);
-        for (String hero : heroes) {
-            marvelSuperhero = new MarvelSuperhero(R.drawable.avengers, hero, "");
-            marvelSuperheroes.add(marvelSuperhero);
-
-
+        for (final String hero : heroes) {
             retrofit2.Call<JsonObject> call =
                     service.getDataCharacters(Constants.PUBLIC_KEY, Constants.TS, Constants.HASH,
                                               hero);
@@ -88,7 +81,8 @@ public class TeamActivity extends Activity {
                     try {
                         JSONObject jsonObject = new JSONObject(response.body().getAsJsonObject("data").toString());
                         JSONArray jsonArray = jsonObject.getJSONArray("results");
-                        parseHero(jsonArray, marvelSuperhero);
+                        parseHero(jsonArray);
+                        recyclerView.setAdapter(marvelSuperheroAdapter);
                     } catch (JSONException je){
                         je.printStackTrace();
                     }
@@ -98,28 +92,34 @@ public class TeamActivity extends Activity {
                 public void onFailure(retrofit2.Call<JsonObject> call, Throwable t){ }
             });
         }
-        MarvelSuperheroAdapter marvelSuperheroAdapter = new MarvelSuperheroAdapter(marvelSuperheroes, this);
-        recyclerView.setAdapter(marvelSuperheroAdapter);
     }
 
 
-    private void parseHero(JSONArray jsonArray, MarvelSuperhero marvelHero) throws JSONException{
+    private void parseHero(JSONArray jsonArray) throws JSONException{
+
         for (int i = 0; i < jsonArray.length(); i++){
             JSONObject hero = jsonArray.getJSONObject(i);
             String description = "";
+            String name = "";
+            name = hero.getString("name");
             if(hero.isNull("description") || hero.getString("description") == ""){
-                description = "Lo sentimos, este héroe no tiene información, quizá está en un " +
-                        "archivo secreto de S.H.I.E.L.D";
+                description = "";
             }else{
                 description = hero.getString("description");
             }
-            System.out.println(description);
+            if (description == ""){
+                description = "Lo sentimos, este héroe no tiene información, quizá está en un " +
+                              "archivo secreto de S.H.I.E.L.D";
+            }
 
-            JSONObject thumbnail = hero.getJSONObject("thumbnail");
-            String path = thumbnail.getString("path");
-            String extension = thumbnail.getString("extension");
-
-            marvelHero.setDescription(description);
+            String marvelPicture = "";
+            if(!hero.isNull("thumbnail")){
+                JSONObject thumbnail = hero.getJSONObject("thumbnail");
+                marvelPicture += thumbnail.getString("path");
+                marvelPicture += ".";
+                marvelPicture += thumbnail.getString("extension");
+            }
+            marvelSuperheroes.add(new MarvelSuperhero(R.drawable.profile, name, description, marvelPicture));
         }
     }
 }
