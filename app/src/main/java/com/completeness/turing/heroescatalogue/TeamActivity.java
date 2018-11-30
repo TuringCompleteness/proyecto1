@@ -103,7 +103,8 @@ public class TeamActivity extends Activity {
             String name = "";
             name = hero.getString("name");
             if(hero.isNull("description") || hero.getString("description") == ""){
-                description = "";
+                description = "Lo sentimos, este héroe no tiene información, quizá está en un " +
+                        "archivo secreto de S.H.I.E.L.D";
             }else{
                 description = hero.getString("description");
             }
