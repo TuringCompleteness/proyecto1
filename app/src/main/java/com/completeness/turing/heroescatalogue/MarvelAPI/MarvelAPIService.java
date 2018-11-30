@@ -13,5 +13,4 @@ public interface MarvelAPIService {
                                        @Query("ts") int ts,
                                        @Query("hash") String hash,
                                        @Query("name") String name);
-
 }

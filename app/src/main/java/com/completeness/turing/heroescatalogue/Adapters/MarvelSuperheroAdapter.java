@@ -39,7 +39,7 @@ public class MarvelSuperheroAdapter extends RecyclerView.Adapter<MarvelSuperhero
     public void onBindViewHolder(@NonNull MarvelSuperheroViewHolder marvelHeroViewHolder, int i) {
         final MarvelSuperhero hero = marvelSuperheroes.get(i);
         marvelHeroViewHolder.heroImageView.setImageResource(hero.getPicture());
-        marvelHeroViewHolder.nameTextView.setText(hero.getName());
+        marvelHeroViewHolder.nameTextView.setText(hero.getDescription());
 
         marvelHeroViewHolder.heroCard.setOnClickListener(new View.OnClickListener() {
             @Override
