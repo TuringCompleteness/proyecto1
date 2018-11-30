@@ -4,34 +4,34 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".TeamActivity">
+    tools:context=".SuperheroActivity">
 
     <ImageView
-        android:id="@+id/teamWallpaper"
+        android:id="@+id/heroImageView"
         android:layout_width="match_parent"
         android:layout_height="126dp"
         android:scaleType="centerCrop"
         android:adjustViewBounds="true"/>
 
     <TextView
-        android:id="@+id/teamName"
+        android:id="@+id/heroName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/teamWallpaper"
+        android:layout_below="@id/heroImageView"
         android:textColor="@color/colorPrimary"
         android:textSize="25sp"
         android:textStyle="italic"
         android:fontFamily="sans-serif"
-        android:layout_marginLeft="10dp"/>
+        android:layout_margin="10dp"/>
 
     <TextView
-        android:id="@+id/teamCreators"
+        android:id="@+id/heroDescription"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@id/teamName"
+        android:layout_below="@id/heroName"
         android:textColor="@color/colorHint"
         android:fontFamily="sans-serif-condensed"
-        android:textSize="15sp"
-        android:layout_marginLeft="15dp"/>
+        android:textSize="20sp"
+        android:layout_margin="15dp"/>
 
 </RelativeLayout>

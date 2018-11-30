@@ -50,7 +50,7 @@ public class TeamActivity extends Activity {
         String teamNameString = bundle.getString("teamName");
         String teamCreatorsString = bundle.getString("creators");
 
-
+        marvelSuperheroes.clear();
         teamWallpaper.setImageResource(R.drawable.cover);
         teamName.setText(teamNameString);
         teamCreators.setText(teamCreatorsString);

@@ -51,6 +51,8 @@ public class MarvelSuperheroAdapter extends RecyclerView.Adapter<MarvelSuperhero
             public void onClick(View v) {
                 Intent intent = new Intent(activity, SuperheroActivity.class);
                 intent.putExtra("heroName", hero.getName());
+                intent.putExtra("heroDescription", hero.getDescription());
+                intent.putExtra("heroPicture", hero.getMarvelPicture());
                 activity.startActivity(intent);
             }
         });

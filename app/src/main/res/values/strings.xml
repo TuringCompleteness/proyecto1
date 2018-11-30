@@ -14,6 +14,7 @@
 
     <string name="teamName">Team</string>
     <string name="teamCreators">Creators</string>
+    <string name="title_activity_superhero">Superheroe</string>
 
     <drawable name="AvengersPicture"> </drawable>
 </resources>
