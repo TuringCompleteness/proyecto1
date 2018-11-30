@@ -4,7 +4,8 @@ public class MarvelSuperhero {
 
     private int picture;
     private String name;
-    private String description;
+    private String description = "Lo sentimos, este héroe no tiene información, quizá está en un " +
+            "archivo secreto de S.H.I.E.L.D";
     private String marvelPicture;
 
     public MarvelSuperhero(int picture, String name, String description, String marvelPicture) {
@@ -35,7 +36,13 @@ public class MarvelSuperhero {
     }
 
     public void setDescription(String description) {
-        this.description = description;
+        if (description == ""){
+            this.description = "Lo sentimos, este héroe no tiene información, quizá está en un " +
+                    "archivo secreto de S.H.I.E.L.D";
+        } else {
+            this.description = description;
+        }
+
     }
 
     public String getMarvelPicture() {

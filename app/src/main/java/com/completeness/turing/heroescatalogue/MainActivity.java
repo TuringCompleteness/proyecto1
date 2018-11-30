@@ -64,8 +64,8 @@ public class MainActivity extends AppCompatActivity {
         teams.add(new MarvelTeam(R.drawable.inhumans_logo, "Inhumans",
                                 "Stan Lee", Color.parseColor("#00A5BC")));
         teams.add(new MarvelTeam(R.drawable.runaways_logo, "Runaways",
-                                "Stan Lee", Color.parseColor("#A33127")));
+                                "Stan Lee", Color.parseColor("#928E7F")));
         teams.add(new MarvelTeam(R.drawable.hire_logo, "Heroes for Hire",
-                                "Stan Lee", Color.parseColor("#A33127")));
+                                "Stan Lee", Color.parseColor("#020030")));
     }
 }

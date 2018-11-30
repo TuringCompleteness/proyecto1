@@ -15,6 +15,7 @@
     <string name="teamName">Team</string>
     <string name="teamCreators">Creators</string>
     <string name="title_activity_superhero">Superheroe</string>
+    <string name="DefaultDescription">Lo sentimos, este héroe no tiene información, quizá está en un  archivo secreto de S.H.I.E.L.D</string>
 
     <drawable name="AvengersPicture"> </drawable>
 </resources>

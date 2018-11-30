@@ -3,35 +3,37 @@ package com.completeness.turing.heroescatalogue.GraphicModels;
 public class TeamCharacters {
 
     private static String[] Avengers = {
-      "Iron Man", "Captain America", "Spider-Man", "Thor",
+      "Iron Man", "Captain America", "Spider-Man", "Thor", "Hulk", "Hawkeye", "Black Panther",
+            "Scarlet Witch", "Vision", "Doctor Strange",
     };
 
     private static String[] Xmen = {
-            "Wolverine", "Professor X", "Storm", "Cyclops", "Gambit", "Beast"
+            "Wolverine", "Professor X", "Storm", "Cyclops", "Gambit", "Beast", "Jean Grey",
+            "Kitty Pryde", "Colossus", "Nightcrawler", "Magneto"
     };
 
     private static String[] FantasticFour = {
-            "Mr. Fantastic", "Sue Storm", "Johnny Storm", "The Thing",
+            "Mr. Fantastic", "Sue Storm", "Human Torch", "Thing",
     };
 
     private static String[] GuardiansOfTheGalaxy = {
-            "Peter Quill", "Gamora", "Drax", "Groot", "Rocket",
+            "Peter Quill", "Gamora", "Drax", "Groot", "Rocket", "Adam Warlock"
     };
 
     private static String[] TheDefenders = {
-            "Daredevil", "Jessica Jones", "Luke Cage",
+            "Daredevil", "Jessica Jones", "Luke Cage", "Danny Rand",
     };
 
     private static String[] Inhumans = {
-            "Black Bolt", "Medusa", "Karnak",
+            "Black Bolt", "Medusa", "Karnak", "Crystal", "Gorgon", "Triton", "Maximus"
     };
 
     private static String[] Runaways = {
-            "Alex Wilder", "Nico Minoru", "Karolina Dean",
+            "Alex Wilder", "Nico Minoru", "Karolina Dean", "Chase Stein", "Molly Hayes", "Gertrude Yorkes"
     };
 
     private static String[] HeroesForHire = {
-            "Iron Fist", "Luke Cage"
+            "Danny Rand", "Luke Cage"
     };
 
     public static String[] getHeroes(String team) {

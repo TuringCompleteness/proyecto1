@@ -32,6 +32,7 @@
         android:textColor="@color/colorHint"
         android:fontFamily="sans-serif-condensed"
         android:textSize="20sp"
+        android:text="@string/DefaultDescription"
         android:layout_margin="15dp"/>
 
 </RelativeLayout>
