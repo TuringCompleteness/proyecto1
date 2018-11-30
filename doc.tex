@@ -15,7 +15,7 @@
 }\date{}
 \maketitle
 
-\textbf{Introducción} \
+\textbf{Introducción} \\
 
 Se busca desarrollar una aplicación móvil en el sistema operativo
 Android, utilizando los conceptos vistos en clase sobre dicho entorno
@@ -24,18 +24,39 @@ de desarrollo.
 La aplicación mostrará una lista de las agrupaciones de super
 héroes más representativas del universo Marvel en la actualidad.
 Dentro de la aplicación, será posible navegar por cada agrupación para obtener
-la descripción de la misma, así como sus información adicional sobre
-sus miembros. \
+una lista de sus miembros, así como sus información adicional sobre los mismos. \\ \\ 
 
-\textbf{Público} \
+\textbf{Público} \\
 
 La aplicación está destinada para todas las personas que estén interesadas
 en conocer con más detalle a las agrupaciones de super héroes más importantes
 en la actualidad. El sector poblacional comprende niños, adolescentes y adultos
-con o sin conocimiento previo de los distintos super héroes del universo Marvel. \
+con o sin conocimiento previo de los distintos super héroes del universo Marvel. \\
 
-\textbf{Alcance y desarrollo} \
+\textbf{Alcance y desarrollo} \\
 
+Una primera versión de la aplicación consistió en mostrar diversas agrupaciones de
+super héroes y algunos miembros, sin consumir datos de la API de Marvel. \\
+
+Posteriormente, se hicieron las primeras aproximaciones para comunicar la aplicación 
+con la API, logrando obtener información básica pero sin mostrarla propiamente en 
+las vistas. \\
+
+Como última versión, se implementaron las vistas para presentar la información de
+la API al usuario, como imágenes de los super héroes y una descripción de los
+mismos, con una pantalla dedicada. \\
+
+A lo largo del desarrollo, se utilizaron distintas tecnologías que resultaron
+útiles para facilitar el trabajo. Se utilizó Retrofit, para la comunicación
+con la API de Marvel; se utilizó Gson, para poder utilizar de manera sencilla
+los objetos JSON recibidos con Retrofit; por último se utilizó Glide, para
+mostrar imágenes de los super héroes consumiéndolas el respectivo recurso 
+en internet. \\
+
+Como planes a futuro, buscamos mejorar la aplicación para brindarle una
+mejor experiencia al usuario, mostrando más información sobre los héroes
+y contar con un mayor número de ellos, a pesar de que una posible 
+limitación sería la cantidad de héroes disponibles en la API de Marvel.
 
 
 \end{document}
